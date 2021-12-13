@@ -11,8 +11,11 @@ import javax.persistence.Table;
 @Table(name = "TB_ESTUDANTE")
 public class Estudante {
     
+
     @Id  
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
     private String nome;
 
     private String email;
@@ -28,6 +31,16 @@ public class Estudante {
     }
 
     
+    public int getId() {
+        return id;
+    }
+
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
     public String getNome() {
         return nome;
     }
